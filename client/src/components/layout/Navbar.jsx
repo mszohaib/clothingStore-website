@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, Search, ShoppingBag, User, X } from 'lucide-react';
+import { useCart } from '../../context/CartContext.jsx';
 import { mainNavLinks } from '../../data/navigation.js';
 import { cn } from '../../utils/cn.js';
 import { Container } from '../ui/Container.jsx';
@@ -19,6 +20,7 @@ function navClass({ isActive }) {
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const { lineCount } = useCart();
 
   return (
     <>
@@ -61,10 +63,15 @@ export function Navbar() {
             </Link>
             <Link
               to="/cart"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
+              className="relative inline-flex h-10 w-10 items-center justify-center rounded-xl text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
               aria-label="Cart"
             >
               <ShoppingBag className="h-5 w-5" strokeWidth={1.75} />
+              {lineCount > 0 ? (
+                <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-accent px-1 text-[10px] font-bold leading-none text-white">
+                  {lineCount > 99 ? '99+' : lineCount}
+                </span>
+              ) : null}
             </Link>
           </div>
         </Container>

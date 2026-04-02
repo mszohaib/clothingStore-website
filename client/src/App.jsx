@@ -1,4 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { CartProvider } from './context/CartContext.jsx';
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import { AdminLayout } from './layouts/AdminLayout.jsx';
 import { AuthLayout } from './layouts/AuthLayout.jsx';
@@ -27,6 +28,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
+        <CartProvider>
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
@@ -58,6 +60,7 @@ export default function App() {
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        </CartProvider>
       </BrowserRouter>
     </ThemeProvider>
   );
