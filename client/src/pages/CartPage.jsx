@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Minus, Plus, ShoppingBag, Trash2 } from 'lucide-react';
-import { useCart } from '../context/CartContext.jsx';
+import { lineKey, useCart } from '../context/CartContext.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { Container } from '../components/ui/Container.jsx';
 import { EmptyState } from '../components/ui/EmptyState.jsx';
@@ -34,11 +34,11 @@ export function CartPage() {
         <ul className="space-y-4 lg:col-span-2">
           {items.map((line) => (
             <li
-              key={`${line.slug}-${line.size}`}
+              key={lineKey(line.slug, line.size)}
               className="flex gap-4 rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900/60"
             >
               <Link to={`/shop/${line.slug}`} className="h-28 w-24 shrink-0 overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-800">
-                <img src={line.image_url} alt="" className="h-full w-full object-cover" />
+                <img src={line.image_url || undefined} alt="" className="h-full w-full object-cover" />
               </Link>
               <div className="min-w-0 flex-1">
                 <Link to={`/shop/${line.slug}`} className="font-display font-bold text-neutral-900 hover:text-accent dark:text-white">

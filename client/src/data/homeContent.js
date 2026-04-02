@@ -1,37 +1,36 @@
 /** Curated mock pieces for homepage — aligns with API product shape for easy swap later. */
 
+const u = (id, w = 900) =>
+  `https://images.unsplash.com/${id}?ixlib=rb-4.0.3&auto=format&fit=crop&w=${w}&q=80`;
+
 export const featuredCategories = [
   {
     key: 'jerseys',
     label: 'Jerseys',
     tagline: 'Retro kits & matchwear',
     to: '/shop?category=jerseys',
-    image:
-      'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=900&q=80&auto=format&fit=crop',
+    image: u('photo-1579952363873-27f3bade9f55'),
   },
   {
     key: 't-shirts',
     label: 'T-Shirts',
     tagline: 'Graphics & oversized',
     to: '/shop?category=t-shirts',
-    image:
-      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900&q=80&auto=format&fit=crop',
+    image: u('photo-1521572163474-6864f9cf17ab'),
   },
   {
     key: 'jackets',
     label: 'Jackets',
     tagline: 'Shells & track tops',
     to: '/shop?category=jackets',
-    image:
-      'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=900&q=80&auto=format&fit=crop',
+    image: u('photo-1551028719-00167b16eac5'),
   },
   {
     key: 'vintage',
     label: 'Vintage',
     tagline: 'One-of-one finds',
     to: '/shop?category=vintage',
-    image:
-      'https://images.unsplash.com/photo-1490114538077-275a67c42acc?w=900&q=80&auto=format&fit=crop',
+    image: u('photo-1445205170230-053b83016050'),
   },
 ];
 
@@ -44,8 +43,7 @@ export const newDrops = [
     price: 8490,
     badge: 'new',
     status: 'available',
-    image_url:
-      'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&q=80&auto=format&fit=crop',
+    image_url: u('photo-1579952363873-27f3bade9f55', 800),
   },
   {
     id: 'nd-2',
@@ -55,8 +53,7 @@ export const newDrops = [
     price: 11200,
     badge: 'limited',
     status: 'available',
-    image_url:
-      'https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&q=80&auto=format&fit=crop',
+    image_url: u('photo-1544022613-e87ca75a784a', 800),
   },
   {
     id: 'nd-3',
@@ -66,8 +63,7 @@ export const newDrops = [
     price: 4250,
     badge: 'new',
     status: 'available',
-    image_url:
-      'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80&auto=format&fit=crop',
+    image_url: u('photo-1576566588028-4147f3842f27', 800),
   },
   {
     id: 'nd-4',
@@ -77,8 +73,7 @@ export const newDrops = [
     price: 9650,
     badge: 'sold_out',
     status: 'sold',
-    image_url:
-      'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80&auto=format&fit=crop',
+    image_url: u('photo-1591047139829-d91aecb6caea', 800),
   },
 ];
 
@@ -91,8 +86,7 @@ export const trendingProducts = [
     price: 7890,
     badge: 'limited',
     status: 'available',
-    image_url:
-      'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80&auto=format&fit=crop',
+    image_url: u('photo-1556821840-3a63f95609a7', 800),
   },
   {
     id: 'tr-2',
@@ -102,8 +96,7 @@ export const trendingProducts = [
     price: 6750,
     badge: null,
     status: 'available',
-    image_url:
-      'https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&q=80&auto=format&fit=crop',
+    image_url: u('photo-1542272604-787c3835535d', 800),
   },
   {
     id: 'tr-3',
@@ -113,8 +106,7 @@ export const trendingProducts = [
     price: 9200,
     badge: 'new',
     status: 'available',
-    image_url:
-      'https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccc4?w=800&q=80&auto=format&fit=crop',
+    image_url: u('photo-1461896836934-ffe607ba8211', 800),
   },
   {
     id: 'tr-4',
@@ -124,8 +116,7 @@ export const trendingProducts = [
     price: 18500,
     badge: 'limited',
     status: 'available',
-    image_url:
-      'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80&auto=format&fit=crop',
+    image_url: u('photo-1551028719-00167b16eac5', 800),
   },
 ];
 
@@ -174,10 +165,10 @@ export const testimonials = [
 ];
 
 export const instagramTiles = [
-  'https://images.unsplash.com/photo-1523381210438-271e66be132f?w=600&q=80&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&q=80&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&q=80&auto=format&fit=crop',
+  u('photo-1523381210434-271e8be1f52b', 600),
+  u('photo-1503341504253-dff4815485f1', 600),
+  u('photo-1441986300917-64674bd600d8', 600),
+  u('photo-1434389677669-e08b4cac3105', 600),
+  u('photo-1483985988355-763728e1935b', 600),
+  u('photo-1496747611176-843222e1e57c', 600),
 ];

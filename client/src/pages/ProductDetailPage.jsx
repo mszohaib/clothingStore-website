@@ -15,7 +15,7 @@ import { parseImageList } from '../utils/product.js';
 export function ProductDetailPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const { addItem, clearCart } = useCart();
+  const { addItem, replaceWithProduct } = useCart();
 
   const [product, setProduct] = useState(null);
   const [related, setRelated] = useState([]);
@@ -84,8 +84,7 @@ export function ProductDetailPage() {
 
   const handleBuyNow = () => {
     if (!product || !canBuy) return;
-    clearCart();
-    addItem(product, qty);
+    replaceWithProduct(product, qty);
     navigate('/checkout');
   };
 

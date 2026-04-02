@@ -69,7 +69,7 @@ export function HeroSection() {
             <div className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-neutral-200/80 bg-neutral-900 shadow-2xl dark:border-neutral-800 lg:max-w-none lg:translate-x-4">
               <div className="aspect-[4/5] w-full">
                 <img
-                  src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1000&q=85&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=85"
                   alt=""
                   className="h-full w-full object-cover"
                 />

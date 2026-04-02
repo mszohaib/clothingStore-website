@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, Search, ShoppingBag, User, X } from 'lucide-react';
+import { LogOut, Menu, Search, ShoppingBag, User, X } from 'lucide-react';
+import { useAuth } from '../../context/AuthContext.jsx';
 import { useCart } from '../../context/CartContext.jsx';
 import { mainNavLinks } from '../../data/navigation.js';
 import { cn } from '../../utils/cn.js';
@@ -21,6 +22,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const { lineCount } = useCart();
+  const { user, signOut } = useAuth();
 
   return (
     <>
@@ -54,13 +56,44 @@ export function Navbar() {
               <Search className="h-5 w-5" strokeWidth={1.75} />
             </IconButton>
             <ThemeToggle />
-            <Link
-              to="/login"
-              aria-label="Account"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
-            >
-              <User className="h-5 w-5" strokeWidth={1.75} />
-            </Link>
+            {user ? (
+              <>
+                <div className="hidden items-center gap-2 sm:flex">
+                  <span
+                    className="max-w-[9rem] truncate text-xs font-medium text-neutral-600 dark:text-neutral-400"
+                    title={user.email}
+                  >
+                    {user.email}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={async () => {
+                      await signOut();
+                      navigate('/');
+                    }}
+                    className="inline-flex h-10 items-center gap-1.5 rounded-xl px-3 text-sm font-semibold text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
+                  >
+                    <LogOut className="h-4 w-4" strokeWidth={1.75} />
+                    Sign out
+                  </button>
+                </div>
+                <Link
+                  to="/login"
+                  aria-label="Account"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-neutral-700 transition-colors hover:bg-neutral-100 sm:hidden dark:text-neutral-200 dark:hover:bg-neutral-800"
+                >
+                  <User className="h-5 w-5" strokeWidth={1.75} />
+                </Link>
+              </>
+            ) : (
+              <Link
+                to="/login"
+                aria-label="Sign in"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
+              >
+                <User className="h-5 w-5" strokeWidth={1.75} />
+              </Link>
+            )}
             <Link
               to="/cart"
               className="relative inline-flex h-10 w-10 items-center justify-center rounded-xl text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"

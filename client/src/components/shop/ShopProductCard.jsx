@@ -4,6 +4,7 @@ import { ProductBadge } from '../ui/Badge.jsx';
 import { Button } from '../ui/Button.jsx';
 import { formatPkr } from '../../utils/format.js';
 import { cn } from '../../utils/cn.js';
+import { getPrimaryImageUrl } from '../../utils/product.js';
 import { useCart } from '../../context/CartContext.jsx';
 
 export function ShopProductCard({ product, onAdded }) {
@@ -15,9 +16,12 @@ export function ShopProductCard({ product, onAdded }) {
     e.preventDefault();
     e.stopPropagation();
     if (unavailable) return;
+    if (typeof product.slug !== 'string' || !product.slug.trim()) return;
     addItem(product, 1);
     onAdded?.();
   };
+
+  const thumb = getPrimaryImageUrl(product.image_url);
 
   return (
     <article
@@ -28,7 +32,7 @@ export function ShopProductCard({ product, onAdded }) {
     >
       <Link to={`/shop/${product.slug}`} className="relative block aspect-[3/4] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
         <img
-          src={product.image_url}
+          src={thumb || undefined}
           alt=""
           className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
           loading="lazy"
