@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components -- ThemeProvider + useTheme hook */
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
 const STORAGE_KEY = 'thriftverse-theme';
