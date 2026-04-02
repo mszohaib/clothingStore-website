@@ -1,0 +1,123 @@
+import { useState } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Menu, Search, ShoppingBag, User, X } from 'lucide-react';
+import { mainNavLinks } from '../../data/navigation.js';
+import { cn } from '../../utils/cn.js';
+import { Container } from '../ui/Container.jsx';
+import { IconButton } from '../ui/IconButton.jsx';
+import { Logo } from '../ui/Logo.jsx';
+import { ThemeToggle } from '../ui/ThemeToggle.jsx';
+
+function navClass({ isActive }) {
+  return cn(
+    'whitespace-nowrap text-sm font-medium transition-colors',
+    isActive ? 'text-accent' : 'text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white',
+  );
+}
+
+export function Navbar() {
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <header className="sticky top-0 z-40 border-b border-neutral-200/80 bg-white/85 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-950/85">
+        <Container className="flex h-16 items-center justify-between gap-4 sm:h-[4.25rem]">
+          <div className="flex items-center gap-3 lg:gap-8">
+            <IconButton
+              label="Open menu"
+              className="lg:hidden"
+              onClick={() => setOpen(true)}
+            >
+              <Menu className="h-5 w-5" strokeWidth={1.75} />
+            </IconButton>
+            <Logo />
+            <nav className="hidden items-center gap-6 lg:flex xl:gap-7">
+              {mainNavLinks.map((item) => (
+                <NavLink key={item.to} to={item.to} className={navClass}>
+                  {item.label}
+                </NavLink>
+              ))}
+            </nav>
+          </div>
+
+          <div className="flex items-center gap-0.5 sm:gap-1">
+            <IconButton
+              label="Search shop"
+              onClick={() => {
+                navigate('/shop');
+              }}
+            >
+              <Search className="h-5 w-5" strokeWidth={1.75} />
+            </IconButton>
+            <ThemeToggle />
+            <Link
+              to="/login"
+              aria-label="Account"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
+            >
+              <User className="h-5 w-5" strokeWidth={1.75} />
+            </Link>
+            <Link
+              to="/cart"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
+              aria-label="Cart"
+            >
+              <ShoppingBag className="h-5 w-5" strokeWidth={1.75} />
+            </Link>
+          </div>
+        </Container>
+      </header>
+
+      <AnimatePresence>
+        {open ? (
+          <>
+            <motion.button
+              type="button"
+              aria-label="Close menu"
+              className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm lg:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setOpen(false)}
+            />
+            <motion.aside
+              className="fixed inset-y-0 left-0 z-50 flex w-[min(100vw-3rem,20rem)] flex-col border-r border-neutral-200 bg-white shadow-xl dark:border-neutral-800 dark:bg-neutral-950 lg:hidden"
+              initial={{ x: '-100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '-100%' }}
+              transition={{ type: 'tween', duration: 0.28 }}
+            >
+              <div className="flex items-center justify-between border-b border-neutral-200 px-4 py-4 dark:border-neutral-800">
+                <Logo />
+                <IconButton label="Close menu" onClick={() => setOpen(false)}>
+                  <X className="h-5 w-5" strokeWidth={1.75} />
+                </IconButton>
+              </div>
+              <nav className="flex flex-1 flex-col gap-1 overflow-y-auto p-4">
+                {mainNavLinks.map((item) => (
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setOpen(false)}
+                    className={({ isActive }) =>
+                      cn(
+                        'rounded-xl px-4 py-3 text-base font-semibold',
+                        isActive
+                          ? 'bg-accent/10 text-accent'
+                          : 'text-neutral-800 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-900',
+                      )
+                    }
+                  >
+                    {item.label}
+                  </NavLink>
+                ))}
+              </nav>
+            </motion.aside>
+          </>
+        ) : null}
+      </AnimatePresence>
+    </>
+  );
+}
