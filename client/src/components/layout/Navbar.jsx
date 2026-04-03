@@ -26,7 +26,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 border-b border-neutral-200/80 bg-white/85 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-950/85">
+      <header className="sticky top-0 z-40 border-b border-neutral-200/90 bg-white/90 backdrop-blur-md dark:border-neutral-900 dark:bg-black/90">
         <Container className="flex h-16 items-center justify-between gap-4 sm:h-[4.25rem]">
           <div className="flex items-center gap-3 lg:gap-8">
             <IconButton
@@ -36,7 +36,7 @@ export function Navbar() {
             >
               <Menu className="h-5 w-5" strokeWidth={1.75} />
             </IconButton>
-            <Logo />
+            <Logo className="min-w-0 self-center" navFramed />
             <nav className="hidden items-center gap-6 lg:flex xl:gap-7">
               {mainNavLinks.map((item) => (
                 <NavLink key={item.to} to={item.to} className={navClass}>
@@ -123,14 +123,14 @@ export function Navbar() {
               onClick={() => setOpen(false)}
             />
             <motion.aside
-              className="fixed inset-y-0 left-0 z-50 flex w-[min(100vw-3rem,20rem)] flex-col border-r border-neutral-200 bg-white shadow-xl dark:border-neutral-800 dark:bg-neutral-950 lg:hidden"
+              className="fixed inset-y-0 left-0 z-50 flex w-[min(100vw-3rem,20rem)] flex-col border-r border-neutral-200 bg-white shadow-xl dark:border-neutral-900 dark:bg-black lg:hidden"
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ type: 'tween', duration: 0.28 }}
             >
-              <div className="flex items-center justify-between border-b border-neutral-200 px-4 py-4 dark:border-neutral-800">
-                <Logo />
+              <div className="flex items-center justify-between gap-3 border-b border-neutral-200 px-4 py-4 dark:border-neutral-800">
+                <Logo compact navFramed className="min-w-0 flex-1 self-center" />
                 <IconButton label="Close menu" onClick={() => setOpen(false)}>
                   <X className="h-5 w-5" strokeWidth={1.75} />
                 </IconButton>

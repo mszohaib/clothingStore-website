@@ -8,11 +8,11 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-950">
+    <footer className="border-t border-neutral-200 bg-neutral-100 dark:border-neutral-900 dark:bg-black">
       <Container className="py-12 lg:py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
-            <Logo />
+            <Logo imageClassName="h-9 max-h-11 w-auto sm:h-10 sm:max-w-[9.5rem]" />
             <p className="max-w-xs text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
               Curated streetwear &amp; thrift from Pakistan. Original pieces, limited drops, DM-era upgraded to a
               proper store experience.

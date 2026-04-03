@@ -11,7 +11,7 @@ export function OrderSuccessPage() {
   return (
     <Container className="py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-lg text-center">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
+        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/12 text-accent ring-1 ring-accent/25 dark:bg-accent/15 dark:text-accent-muted">
           <CheckCircle2 className="h-9 w-9" strokeWidth={1.75} />
         </div>
         <h1 className="mt-6 font-display text-3xl font-extrabold text-neutral-900 dark:text-white">Order placed</h1>

@@ -53,7 +53,7 @@ export function LoginPage() {
 
   if (!configured) {
     return (
-      <Card className="w-full max-w-md border-amber-200 bg-amber-50/80 shadow-lg dark:border-amber-900 dark:bg-amber-950/30">
+      <Card className="w-full max-w-md border-neutral-200 border-l-[3px] border-l-accent bg-neutral-50 shadow-lg dark:border-neutral-800 dark:border-l-accent dark:bg-neutral-950/80">
         <h1 className="font-display text-xl font-bold text-neutral-900 dark:text-white">Auth not configured</h1>
         <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">
           Add <code className="rounded bg-white/80 px-1 text-xs dark:bg-neutral-900">VITE_SUPABASE_URL</code> and{' '}

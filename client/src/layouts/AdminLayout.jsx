@@ -16,7 +16,7 @@ export function AdminLayout() {
       <div className="flex min-h-screen">
         <aside className="sticky top-0 hidden h-screen w-56 shrink-0 flex-col border-r border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900 lg:flex">
           <div className="flex h-16 items-center border-b border-neutral-200 px-4 dark:border-neutral-800">
-            <Logo to="/admin" />
+            <Logo to="/admin" compact />
           </div>
           <nav className="flex-1 space-y-1 overflow-y-auto p-3">
             {links.map(({ to, label, icon: Icon, end }) => (
@@ -51,7 +51,7 @@ export function AdminLayout() {
         <div className="flex min-w-0 flex-1 flex-col">
           <header className="sticky top-0 z-20 flex h-14 items-center justify-between gap-4 border-b border-neutral-200 bg-white/90 px-4 backdrop-blur dark:border-neutral-800 dark:bg-neutral-900/90 lg:h-16 lg:px-6">
             <div className="flex items-center gap-3 lg:hidden">
-              <Logo to="/admin" />
+              <Logo to="/admin" compact />
             </div>
             <h1 className="hidden font-display text-lg font-bold lg:block">Admin</h1>
             <div className="ml-auto flex items-center gap-2">

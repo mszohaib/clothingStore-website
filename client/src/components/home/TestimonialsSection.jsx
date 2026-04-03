@@ -24,7 +24,7 @@ export function TestimonialsSection() {
               transition={{ duration: 0.35, delay: i * 0.08 }}
               className="flex h-full flex-col rounded-2xl border border-neutral-200 bg-neutral-50/80 p-6 dark:border-neutral-800 dark:bg-neutral-900/50"
             >
-              <div className="flex gap-0.5 text-amber-500" aria-hidden>
+              <div className="flex gap-0.5 text-accent" aria-hidden>
                 {Array.from({ length: t.rating }).map((_, j) => (
                   <Star key={j} className="h-4 w-4 fill-current" strokeWidth={0} />
                 ))}

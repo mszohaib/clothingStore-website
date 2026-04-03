@@ -12,8 +12,8 @@ export function AnnouncementBar() {
   const text = announcementItems[i] ?? announcementItems[0];
 
   return (
-    <div className="relative z-50 border-b border-neutral-200/80 bg-neutral-900 text-center text-xs font-medium text-white dark:border-neutral-800 dark:bg-black">
-      <p className="py-2.5 px-4 tracking-wide transition-opacity duration-300">{text}</p>
+    <div className="relative z-50 border-b border-accent/25 bg-neutral-950 text-center text-xs font-medium tracking-wide text-neutral-200 dark:border-accent/20 dark:bg-black">
+      <p className="py-2.5 px-4 transition-opacity duration-300">{text}</p>
     </div>
   );
 }

@@ -5,8 +5,8 @@ import { ThemeToggle } from '../components/ui/ThemeToggle.jsx';
 export function AuthLayout() {
   return (
     <div className="relative flex min-h-screen flex-col bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)]">
-      <header className="flex items-center justify-between px-4 py-4 sm:px-6">
-        <Logo />
+      <header className="flex items-center justify-between gap-4 px-4 py-4 sm:px-6">
+        <Logo className="min-w-0 shrink" />
         <ThemeToggle />
       </header>
       <div className="flex flex-1 flex-col items-center justify-center px-4 pb-16 pt-4 sm:px-6">

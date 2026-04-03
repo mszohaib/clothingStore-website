@@ -26,7 +26,7 @@ export function ShopProductCard({ product, onAdded }) {
   return (
     <article
         className={cn(
-        'group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900/60',
+        'group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm shadow-neutral-900/[0.03] transition hover:border-neutral-300 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950/60 dark:shadow-black/30 dark:hover:border-neutral-700',
         product.status === 'sold' && 'opacity-90',
       )}
     >

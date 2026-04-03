@@ -11,6 +11,8 @@ export const CATEGORY_OPTIONS = [
   { value: 'jerseys', label: 'Jerseys' },
   { value: 't-shirts', label: 'T-Shirts' },
   { value: 'jackets', label: 'Jackets' },
+  { value: 'shorts', label: 'Shorts' },
+  { value: 'accessories', label: 'Accessories' },
   { value: 'vintage', label: 'Vintage' },
 ];
 

@@ -12,7 +12,7 @@ const items = [
 export function BottomNav() {
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-30 border-t border-neutral-200 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-lg dark:border-neutral-800 dark:bg-neutral-950/95 lg:hidden"
+      className="fixed bottom-0 left-0 right-0 z-30 border-t border-neutral-200 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-lg dark:border-neutral-900 dark:bg-black/95 lg:hidden"
       aria-label="Mobile navigation"
     >
       <ul className="mx-auto flex max-w-lg items-stretch justify-around px-2">

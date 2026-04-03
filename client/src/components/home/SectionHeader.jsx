@@ -35,7 +35,7 @@ export function SectionHeader({
         <div className={cn(align === 'center' && 'flex justify-center')}>
           <Link
             to={action.to}
-            className="group inline-flex items-center gap-1.5 text-sm font-bold text-neutral-900 dark:text-white"
+            className="group inline-flex items-center gap-1.5 text-sm font-bold text-neutral-900 transition-colors hover:text-accent dark:text-white dark:hover:text-accent"
           >
             {action.label}
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

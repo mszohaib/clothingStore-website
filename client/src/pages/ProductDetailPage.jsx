@@ -217,7 +217,7 @@ export function ProductDetailPage() {
           </div>
 
           {!canBuy ? (
-            <p className="mt-4 text-sm font-medium text-amber-700 dark:text-amber-300">
+            <p className="mt-4 text-sm font-medium text-neutral-600 dark:text-neutral-400">
               This piece is not available for purchase.
             </p>
           ) : null}

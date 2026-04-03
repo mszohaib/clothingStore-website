@@ -31,7 +31,7 @@ export function useShopParams() {
   }, [setSearchParams]);
 
   const apiParams = useMemo(() => {
-    const o = { limit: 24 };
+    const o = { limit: 48 };
     const keys = [
       'search',
       'category',

@@ -27,7 +27,7 @@ export function ShopPage() {
   }, [debouncedSearch, searchFromUrl, set]);
 
   const [products, setProducts] = useState([]);
-  const [meta, setMeta] = useState({ page: 1, totalPages: 0, total: 0, limit: 24 });
+  const [meta, setMeta] = useState({ page: 1, totalPages: 0, total: 0, limit: 48 });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [filterOpen, setFilterOpen] = useState(false);

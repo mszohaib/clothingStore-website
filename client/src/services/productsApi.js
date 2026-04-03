@@ -1,3 +1,4 @@
+import { applyLocalProductMedia } from '../data/localCatalogProducts.js';
 import { apiGet } from './api.js';
 
 function toQuery(params) {
@@ -14,14 +15,19 @@ function toQuery(params) {
  * @param {Record<string, string | number | boolean | undefined | null>} params
  * @returns {Promise<{ data: object[], meta: { page, limit, total, totalPages } }>}
  */
-export function fetchProducts(params = {}) {
-  return apiGet(`/products${toQuery(params)}`);
+export async function fetchProducts(params = {}) {
+  const data = await apiGet(`/products${toQuery(params)}`);
+  return {
+    ...data,
+    data: (data.data || []).map(applyLocalProductMedia),
+  };
 }
 
 /**
  * @param {string} slug
  * @returns {Promise<object>}
  */
-export function fetchProductBySlug(slug) {
-  return apiGet(`/products/${encodeURIComponent(slug)}`);
+export async function fetchProductBySlug(slug) {
+  const product = await apiGet(`/products/${encodeURIComponent(slug)}`);
+  return applyLocalProductMedia(product);
 }

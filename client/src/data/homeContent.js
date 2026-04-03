@@ -1,5 +1,7 @@
 /** Curated mock pieces for homepage — aligns with API product shape for easy swap later. */
 
+import { homeNewDrops, localCategoryHeroImages } from './localCatalogProducts.js';
+
 const u = (id, w = 900) =>
   `https://images.unsplash.com/${id}?ixlib=rb-4.0.3&auto=format&fit=crop&w=${w}&q=80`;
 
@@ -9,116 +11,33 @@ export const featuredCategories = [
     label: 'Jerseys',
     tagline: 'Retro kits & matchwear',
     to: '/shop?category=jerseys',
-    image: u('photo-1579952363873-27f3bade9f55'),
+    image: localCategoryHeroImages.jerseys,
   },
   {
     key: 't-shirts',
     label: 'T-Shirts',
     tagline: 'Graphics & oversized',
     to: '/shop?category=t-shirts',
-    image: u('photo-1521572163474-6864f9cf17ab'),
+    image: localCategoryHeroImages.tShirts,
   },
   {
     key: 'jackets',
     label: 'Jackets',
     tagline: 'Shells & track tops',
     to: '/shop?category=jackets',
-    image: u('photo-1551028719-00167b16eac5'),
+    image: localCategoryHeroImages.jackets,
   },
   {
     key: 'vintage',
     label: 'Vintage',
     tagline: 'One-of-one finds',
     to: '/shop?category=vintage',
-    image: u('photo-1445205170230-053b83016050'),
+    image: localCategoryHeroImages.vintage,
   },
 ];
 
-export const newDrops = [
-  {
-    id: 'nd-1',
-    title: 'Retro Football Jersey — Navy',
-    slug: 'retro-football-jersey-navy',
-    category: 'Jerseys',
-    price: 8490,
-    badge: 'new',
-    status: 'available',
-    image_url: u('photo-1579952363873-27f3bade9f55', 800),
-  },
-  {
-    id: 'nd-2',
-    title: 'Vintage Nike Windbreaker',
-    slug: 'vintage-nike-windbreaker',
-    category: 'Jackets',
-    price: 11200,
-    badge: 'limited',
-    status: 'available',
-    image_url: u('photo-1544022613-e87ca75a784a', 800),
-  },
-  {
-    id: 'nd-3',
-    title: 'Oversized Graphic Tee',
-    slug: 'oversized-graphic-tee',
-    category: 'T-Shirts',
-    price: 4250,
-    badge: 'new',
-    status: 'available',
-    image_url: u('photo-1576566588028-4147f3842f27', 800),
-  },
-  {
-    id: 'nd-4',
-    title: 'Classic Track Jacket',
-    slug: 'classic-track-jacket',
-    category: 'Jackets',
-    price: 9650,
-    badge: 'sold_out',
-    status: 'sold',
-    image_url: u('photo-1591047139829-d91aecb6caea', 800),
-  },
-];
-
-export const trendingProducts = [
-  {
-    id: 'tr-1',
-    title: 'Stüssy-Style Hoodie',
-    slug: 'stussy-style-hoodie',
-    category: 'T-Shirts',
-    price: 7890,
-    badge: 'limited',
-    status: 'available',
-    image_url: u('photo-1556821840-3a63f95609a7', 800),
-  },
-  {
-    id: 'tr-2',
-    title: 'Carpenter Denim Pants',
-    slug: 'carpenter-denim-pants',
-    category: 'Vintage',
-    price: 6750,
-    badge: null,
-    status: 'available',
-    image_url: u('photo-1542272604-787c3835535d', 800),
-  },
-  {
-    id: 'tr-3',
-    title: '90s Sports Jersey',
-    slug: '90s-sports-jersey',
-    category: 'Jerseys',
-    price: 9200,
-    badge: 'new',
-    status: 'available',
-    image_url: u('photo-1461896836934-ffe607ba8211', 800),
-  },
-  {
-    id: 'tr-4',
-    title: 'Vintage Leather Jacket',
-    slug: 'vintage-leather-jacket',
-    category: 'Jackets',
-    price: 18500,
-    badge: 'limited',
-    status: 'available',
-    image_url: u('photo-1551028719-00167b16eac5', 800),
-  },
-];
+/** All eight in-store photos (see `localCatalogProducts.js`). Trending uses live API in `TrendingSection.jsx`. */
+export const newDrops = homeNewDrops;
 
 export const whyUsItems = [
   {

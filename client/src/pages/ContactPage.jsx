@@ -43,7 +43,7 @@ export function ContactPage() {
     return (
       <Container className="py-16 sm:py-24">
         <div className="mx-auto max-w-lg rounded-2xl border border-neutral-200 bg-white p-8 text-center dark:border-neutral-800 dark:bg-neutral-900/60 sm:p-10">
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/12 text-accent ring-1 ring-accent/25 dark:bg-accent/15 dark:text-accent-muted">
             <CheckCircle2 className="h-8 w-8" strokeWidth={1.75} />
           </div>
           <h1 className="mt-6 font-display text-2xl font-bold text-neutral-900 dark:text-white">Message received</h1>

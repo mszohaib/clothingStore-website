@@ -8,7 +8,7 @@ const variants = {
     'border border-neutral-300 bg-white text-neutral-900 hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100 dark:hover:bg-neutral-800',
   ghost: 'text-neutral-700 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800',
   outline:
-    'border-2 border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-neutral-900',
+    'border-2 border-neutral-950 text-neutral-950 hover:bg-neutral-950 hover:text-white dark:border-neutral-100 dark:text-white dark:hover:bg-white dark:hover:text-neutral-950',
 };
 
 const sizes = {

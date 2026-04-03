@@ -11,10 +11,10 @@ export function CtaBanner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
-          className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-900 px-6 py-14 text-center dark:border-neutral-800 sm:px-12 lg:px-16 lg:py-16"
+          className="relative overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-950 px-6 py-14 text-center shadow-xl shadow-black/25 dark:border-neutral-800 sm:px-12 lg:px-16 lg:py-16"
         >
           <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-accent/40 blur-[80px]" />
-          <div className="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-white/10 blur-[70px]" />
+          <div className="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-white/8 blur-[70px]" />
           <div className="relative mx-auto max-w-2xl">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent">Limited stock</p>
             <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">

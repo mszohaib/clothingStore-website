@@ -4,11 +4,11 @@ export function EmptyState({ icon: Icon, title, description, className, children
   return (
     <div
       className={cn(
-        'flex flex-col items-center justify-center rounded-2xl border border-dashed border-neutral-300 bg-neutral-50/80 px-6 py-16 text-center dark:border-neutral-700 dark:bg-neutral-900/40',
+        'flex flex-col items-center justify-center rounded-2xl border border-dashed border-neutral-300 bg-neutral-50/90 px-6 py-16 text-center dark:border-neutral-700 dark:bg-neutral-950/50',
         className,
       )}
     >
-      {Icon ? <Icon className="h-10 w-10 text-neutral-400" strokeWidth={1.25} /> : null}
+      {Icon ? <Icon className="h-10 w-10 text-neutral-400 dark:text-neutral-500" strokeWidth={1.25} /> : null}
       <h2 className="mt-4 font-display text-lg font-bold text-neutral-900 dark:text-white">{title}</h2>
       {description ? (
         <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-400">{description}</p>

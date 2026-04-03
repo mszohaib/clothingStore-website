@@ -4,10 +4,10 @@ import { Container } from '../ui/Container.jsx';
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden border-b border-neutral-200 dark:border-neutral-800">
+    <section className="relative overflow-hidden border-b border-neutral-200 dark:border-neutral-900">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -right-20 -top-32 h-[420px] w-[420px] rounded-full bg-accent/20 blur-[100px] dark:bg-accent/25" />
-        <div className="absolute -bottom-40 left-1/4 h-[360px] w-[360px] rounded-full bg-neutral-400/15 blur-[90px] dark:bg-white/5" />
+        <div className="absolute -bottom-40 left-1/4 h-[360px] w-[360px] rounded-full bg-neutral-400/12 blur-[90px] dark:bg-neutral-500/10" />
       </div>
 
       <Container className="relative">
@@ -66,7 +66,7 @@ export function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.55, delay: 0.08 }}
           >
-            <div className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-neutral-200/80 bg-neutral-900 shadow-2xl dark:border-neutral-800 lg:max-w-none lg:translate-x-4">
+            <div className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-950 shadow-2xl shadow-black/30 dark:border-neutral-800 lg:max-w-none lg:translate-x-4">
               <div className="aspect-[4/5] w-full">
                 <img
                   src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=85"
