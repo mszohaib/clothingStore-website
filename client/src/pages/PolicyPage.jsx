@@ -19,7 +19,7 @@ export function PolicyPage() {
           Shipping, payments & returns
         </h1>
         <p className="mt-4 text-neutral-600 dark:text-neutral-400">
-          Plain-language rules for how this demo store operates. For order-specific questions,{' '}
+          How Railframe handles shipping, payments, and support. For order-specific questions,{' '}
           <Link to="/contact" className="font-semibold text-accent hover:underline">
             contact us
           </Link>{' '}
@@ -42,8 +42,12 @@ export function PolicyPage() {
 
         <Section id="payments" title="Payments">
           <p>
-            Checkout supports the payment methods shown on the checkout screen (for example bank transfer, digital wallet,
-            or card placeholder where enabled). Instructions for manual methods appear after you place an order.
+            At checkout you can choose <strong className="text-neutral-800 dark:text-neutral-200">bank transfer (IBFT)</strong>,{' '}
+            <strong className="text-neutral-800 dark:text-neutral-200">NayaPay</strong>,{' '}
+            <strong className="text-neutral-800 dark:text-neutral-200">Easypaisa / JazzCash</strong>, or{' '}
+            <strong className="text-neutral-800 dark:text-neutral-200">debit / credit card</strong> (we confirm card orders
+            manually after you submit — no automatic card charge until a gateway is connected). You will receive payment
+            instructions by email after placing your order.
           </p>
           <p>
             Prices are listed in <strong className="text-neutral-800 dark:text-neutral-200">PKR</strong>. Your bank or wallet

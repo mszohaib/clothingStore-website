@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { cn } from '../../utils/cn';
 
-/** Text-only wordmark — no third-party or client logo imagery (portfolio-safe). */
+/** Text-only wordmark — no third-party logo imagery. */
 export function Logo({
   className,
   to = '/',
@@ -17,7 +17,9 @@ export function Logo({
     ? compact
       ? 'h-9 w-9 sm:h-9 sm:w-9'
       : 'h-10 w-10 sm:h-[2.625rem] sm:w-[2.625rem]'
-    : null;
+    : compact
+      ? 'h-8 w-8 sm:h-8 sm:w-8'
+      : 'h-9 w-9 sm:h-10 sm:w-10';
 
   const initialMark = (
     <span
@@ -33,8 +35,6 @@ export function Logo({
     </span>
   );
 
-  const framedMark = navFramed ? initialMark : null;
-
   return (
     <Link
       to={to}
@@ -46,7 +46,7 @@ export function Logo({
         className,
       )}
     >
-      {framedMark}
+      {initialMark}
       {showWordmark ? (
         <span
           className={cn(

@@ -2,12 +2,14 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
 const STORAGE_KEY = 'railframe-theme';
+const LEGACY_THEME_KEY = 'thriftverse-theme';
 
 const ThemeContext = createContext(null);
 
 function getStoredTheme() {
   if (typeof window === 'undefined') return 'dark';
-  const v = localStorage.getItem(STORAGE_KEY);
+  const v =
+    localStorage.getItem(STORAGE_KEY) ?? localStorage.getItem(LEGACY_THEME_KEY);
   if (v === 'light' || v === 'dark') return v;
   return 'dark';
 }

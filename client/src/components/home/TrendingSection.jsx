@@ -90,7 +90,7 @@ export function TrendingSection() {
         ) : null}
         {!loading && !error && items.length === 0 ? (
           <p className="mt-8 text-center text-sm text-neutral-500 dark:text-neutral-400">
-            Demo pieces will appear here after the catalog SQL is applied. Browse{' '}
+            No extra catalog items to show here yet. Browse{' '}
             <a href="/shop" className="font-semibold text-accent underline-offset-2 hover:underline">
               Shop
             </a>{' '}

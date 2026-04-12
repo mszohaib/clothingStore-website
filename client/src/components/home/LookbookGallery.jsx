@@ -5,7 +5,7 @@ import { cn } from '../../utils/cn.js';
 import { Container } from '../ui/Container.jsx';
 import { SectionHeader } from './SectionHeader.jsx';
 
-/** Moodboard section — no social network links (portfolio placeholder). */
+/** Moodboard / lookbook grid. */
 export function LookbookGallery() {
   return (
     <section className="border-b border-neutral-200 py-16 dark:border-neutral-800 sm:py-20 lg:py-24">
@@ -13,7 +13,7 @@ export function LookbookGallery() {
         <SectionHeader
           eyebrow="Lookbook"
           title="On the moodboard"
-          description="Placeholder grid for styling inspiration — fits, flatlays, and detail shots."
+          description="Fits, flatlays, and detail shots from the floor."
           align="center"
         />
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-6">

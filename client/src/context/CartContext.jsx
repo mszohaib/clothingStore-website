@@ -3,6 +3,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import { getPrimaryImageUrl } from '../utils/product.js';
 
 const STORAGE_KEY = 'railframe-cart';
+const LEGACY_CART_KEY = 'thriftverse-cart';
 
 export function lineKey(slug, size) {
   return `${String(slug ?? '').trim()}::${String(size ?? '').trim()}`;
@@ -10,7 +11,8 @@ export function lineKey(slug, size) {
 
 function loadCart() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw =
+      localStorage.getItem(STORAGE_KEY) ?? localStorage.getItem(LEGACY_CART_KEY);
     if (!raw) return [];
     const parsed = JSON.parse(raw);
     return Array.isArray(parsed) ? parsed : [];

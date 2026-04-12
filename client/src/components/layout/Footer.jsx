@@ -13,7 +13,8 @@ export function Footer() {
           <div className="space-y-4">
             <Logo navFramed className="max-w-[12rem]" />
             <p className="max-w-xs text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-              Demo clothing storefront — curated pieces, limited drops, and a full cart / checkout flow for portfolio use.
+              Curated streetwear and vintage — original pieces, limited drops, and checkout with the payment options you
+              select at order time.
             </p>
           </div>
           {footerColumns.map((col) => (
@@ -37,7 +38,7 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 text-center text-xs text-neutral-500 dark:border-neutral-800 dark:text-neutral-500 sm:flex-row sm:text-left">
-          <p>&copy; {year} Railframe (demo). Not a real brand.</p>
+          <p>&copy; {year} Railframe. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-4 sm:justify-end">
             <Link to="/policy" className="hover:text-neutral-800 dark:hover:text-neutral-300">
               Policies

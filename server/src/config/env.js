@@ -6,10 +6,17 @@ function required(name) {
   return v;
 }
 
+const DEV_ORIGINS = ['http://localhost:5173', 'http://127.0.0.1:5173'];
+
 /** Comma-separated list, e.g. https://app.vercel.app,http://localhost:5173 */
 export function getAllowedOrigins() {
   const raw = process.env.FRONTEND_URL || 'http://localhost:5173';
-  return raw.split(',').map((s) => s.trim()).filter(Boolean);
+  const fromEnv = raw.split(',').map((s) => s.trim()).filter(Boolean);
+  const isProd = process.env.NODE_ENV === 'production';
+  if (isProd) {
+    return fromEnv.length ? fromEnv : ['http://localhost:5173'];
+  }
+  return [...new Set([...fromEnv, ...DEV_ORIGINS])];
 }
 
 export const env = {

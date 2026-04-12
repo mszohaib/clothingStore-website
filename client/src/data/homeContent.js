@@ -52,7 +52,7 @@ export const whyUsItems = [
   },
   {
     title: 'Trusted Payment',
-    body: 'Demo checkout supports bank transfer and placeholder payment options — wire this to your real provider later.',
+    body: 'Checkout supports bank transfer, mobile wallets, and card follow-up where offered — transparent steps after you place your order.',
     icon: 'wallet',
   },
   {

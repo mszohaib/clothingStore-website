@@ -1,5 +1,10 @@
 import { PagePlaceholder } from '../PagePlaceholder.jsx';
 
 export function AdminDashboardPage() {
-  return <PagePlaceholder title="Dashboard" description="Stats and recent orders — Step 10." />;
+  return (
+    <PagePlaceholder
+      title="Dashboard"
+      description="Sales summaries, traffic, and recent orders — your command center for the store."
+    />
+  );
 }

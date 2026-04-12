@@ -18,9 +18,10 @@ import {
 } from '../utils/validate.js';
 
 const PAYMENT_OPTIONS = [
-  { value: 'bank_transfer', label: 'Bank transfer' },
-  { value: 'digital_wallet', label: 'Digital wallet (demo)' },
-  { value: 'card_placeholder', label: 'Card (placeholder)' },
+  { value: 'bank_transfer', label: 'Bank transfer (IBFT)' },
+  { value: 'nayapay', label: 'NayaPay' },
+  { value: 'easypaisa', label: 'Easypaisa / JazzCash' },
+  { value: 'card_placeholder', label: 'Debit / credit card (we confirm with you after order)' },
 ];
 
 const selectClass =
@@ -211,7 +212,9 @@ export function CheckoutPage() {
               ))}
             </select>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">
-              After placing your order, follow any instructions shown for manual transfers.
+              Totals are in <strong className="text-neutral-700 dark:text-neutral-300">PKR</strong>. After you submit, watch
+              your email for payment instructions (bank transfer, wallet, or card follow-up). Card is only charged after we
+              confirm your order with you.
             </p>
           </div>
 

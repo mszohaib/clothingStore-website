@@ -15,7 +15,7 @@ const pillars = [
   },
   {
     title: 'Community first',
-    body: 'Railframe exists as a demo for portfolios — ask fit questions through contact, and swap this copy for a real brand story.',
+    body: 'Questions on fit or authenticity? Message us through contact — we answer like a small crew that actually wears the stock.',
     icon: Heart,
   },
 ];
@@ -30,12 +30,13 @@ export function AboutPage() {
             Built for the fit-obsessed
           </h1>
           <p className="mt-6 text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
-            This page showcases a fictional storefront: vintage sportswear and street pieces in one place — photographed
-            honestly, priced fairly, and described so you know what you are getting before it lands on your doorstep.
+            Railframe is a curated thrift and streetwear shop: vintage sportswear, jerseys, and layers in one place —
+            photographed honestly, priced clearly at checkout, and described so you know what you are getting before it
+            ships.
           </p>
           <p className="mt-4 text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
-            New drops, preorders, and sold archives are demo data — swap in your own catalog and policies when you ship for
-            real.
+            New drops, preorders, and sold archives reflect real inventory from our catalog — check the shop for what is
+            available today.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button to="/shop">Shop the catalog</Button>
@@ -47,7 +48,7 @@ export function AboutPage() {
         <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-neutral-200 bg-gradient-to-br from-accent/20 via-neutral-100 to-neutral-200 dark:border-neutral-800 dark:from-accent/10 dark:via-neutral-900 dark:to-neutral-950">
           <div className="absolute inset-0 flex flex-col justify-end p-8 sm:p-10">
             <p className="font-display text-2xl font-bold text-neutral-900 dark:text-white">&ldquo;Wear the story.&rdquo;</p>
-            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">— Railframe (demo)</p>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">— Railframe</p>
           </div>
         </div>
       </div>

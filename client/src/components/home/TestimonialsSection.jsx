@@ -12,7 +12,7 @@ export function TestimonialsSection() {
           align="center"
           eyebrow="Reviews"
           title="Loved by the rotation"
-          description="Sample testimonials for presentation. Replace with real reviews for production."
+          description="What buyers are saying about the rotation."
         />
         <div className="grid gap-4 md:grid-cols-3 md:gap-6">
           {testimonials.map((t, i) => (

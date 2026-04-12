@@ -21,7 +21,8 @@ export function CtaBanner() {
               Secure the fit before it hits the sold archive.
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-neutral-300 sm:text-base">
-              New drops weekly. Bank transfer and demo payment options at checkout. Shipping in 4 to 5 business days.
+              New drops weekly. Pay with the options shown at checkout — including bank transfer, wallets, or card where
+              available. Shipping in 4 to 5 business days.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button to="/shop" size="lg" className="w-full border-0 bg-white text-neutral-900 hover:bg-neutral-100 sm:w-auto">

@@ -4,7 +4,7 @@
     <script>
       (function () {
         try {
-          var t = localStorage.getItem('railframe-theme');
+          var t = localStorage.getItem('railframe-theme') || localStorage.getItem('thriftverse-theme');
           document.documentElement.classList.toggle('dark', t !== 'light');
         } catch (e) {
           document.documentElement.classList.add('dark');
@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>Railframe — Demo clothing store</title>
+    <title>Railframe — Curated streetwear</title>
   </head>
   <body>
     <div id="root"></div>
