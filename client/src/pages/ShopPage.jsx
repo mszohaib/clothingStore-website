@@ -74,7 +74,7 @@ export function ShopPage() {
           All pieces
         </h1>
         <p className="mt-2 max-w-2xl text-neutral-600 dark:text-neutral-400">
-          Search, filter, and sort the full catalog. Data loads from your ThriftVerse API.
+          Search, filter, and sort the full catalog. Data loads from the storefront API.
         </p>
       </div>
 

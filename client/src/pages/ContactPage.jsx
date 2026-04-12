@@ -94,7 +94,7 @@ export function ContactPage() {
             <li className="flex gap-3">
               <MessageSquare className="mt-0.5 h-5 w-5 shrink-0 text-accent" strokeWidth={1.75} />
               <span>
-                Instagram DMs work for quick questions — see the link in the footer.
+                Quick questions? Mention your order number so we can help faster.
               </span>
             </li>
           </ul>

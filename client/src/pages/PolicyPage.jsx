@@ -19,7 +19,7 @@ export function PolicyPage() {
           Shipping, payments & returns
         </h1>
         <p className="mt-4 text-neutral-600 dark:text-neutral-400">
-          Plain-language rules for how ThriftVerse operates. For order-specific questions,{' '}
+          Plain-language rules for how this demo store operates. For order-specific questions,{' '}
           <Link to="/contact" className="font-semibold text-accent hover:underline">
             contact us
           </Link>{' '}
@@ -42,8 +42,8 @@ export function PolicyPage() {
 
         <Section id="payments" title="Payments">
           <p>
-            Checkout supports the payment methods shown on the checkout screen (for example bank transfer, NayaPay,
-            Easypaisa, or card placeholder where enabled). Instructions for manual methods appear after you place an order.
+            Checkout supports the payment methods shown on the checkout screen (for example bank transfer, digital wallet,
+            or card placeholder where enabled). Instructions for manual methods appear after you place an order.
           </p>
           <p>
             Prices are listed in <strong className="text-neutral-800 dark:text-neutral-200">PKR</strong>. Your bank or wallet

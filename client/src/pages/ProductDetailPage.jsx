@@ -162,8 +162,8 @@ export function ProductDetailPage() {
 
           <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-xs leading-relaxed text-neutral-600 dark:border-neutral-800 dark:bg-neutral-900/50 dark:text-neutral-400">
             <p>
-              Shipping in 4–5 business days. No COD. No returns or exchanges. NayaPay and bank transfer accepted at
-              checkout.
+              Shipping in 4–5 business days. No COD. No returns or exchanges unless stated in policy. Bank transfer and
+              demo payment methods at checkout.
             </p>
           </div>
 

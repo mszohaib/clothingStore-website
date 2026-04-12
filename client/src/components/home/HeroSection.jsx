@@ -18,7 +18,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent">Pakistan. Curated thrift</p>
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent">Curated street &amp; sport</p>
               <h1 className="mt-5 font-display text-[2.65rem] font-extrabold leading-[0.95] tracking-tight text-neutral-900 dark:text-white sm:text-6xl lg:text-7xl">
                 Original
                 <br />
@@ -26,7 +26,7 @@ export function HeroSection() {
                 <span className="text-accent"> Curated drops.</span>
               </h1>
               <p className="mt-6 max-w-lg text-base leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-lg">
-                Premium thrifted pieces for the next fit: football jerseys, vintage sportswear, and limited stock.
+                Premium secondhand and new-old-stock pieces for the next fit: jerseys, vintage sportswear, and limited runs.
                 A real storefront upgrade from the DM.
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">

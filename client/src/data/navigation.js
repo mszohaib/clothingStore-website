@@ -43,5 +43,3 @@ export const footerColumns = [
     ],
   },
 ];
-
-export const instagramUrl = 'https://instagram.com';

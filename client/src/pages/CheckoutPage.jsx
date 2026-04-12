@@ -19,8 +19,7 @@ import {
 
 const PAYMENT_OPTIONS = [
   { value: 'bank_transfer', label: 'Bank transfer' },
-  { value: 'nayapay', label: 'NayaPay' },
-  { value: 'easypaisa', label: 'Easypaisa' },
+  { value: 'digital_wallet', label: 'Digital wallet (demo)' },
   { value: 'card_placeholder', label: 'Card (placeholder)' },
 ];
 

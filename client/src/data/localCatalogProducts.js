@@ -1,5 +1,5 @@
 /**
- * ThriftVerse — single source of truth for the 8 in-store SKUs (bundled photos + copy).
+ * In-store SKUs — bundled photos + copy (single source of truth for local image overrides).
  *
  * Assets: `client/src/assets/products/*.jpg`
  * API merge: `client/src/services/productsApi.js` → mergeLocalCatalogIntoProduct()

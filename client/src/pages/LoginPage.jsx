@@ -95,7 +95,7 @@ export function LoginPage() {
   return (
     <Card className="w-full max-w-md border-neutral-200 shadow-lg dark:border-neutral-800">
       <h1 className="font-display text-2xl font-bold text-neutral-900 dark:text-white">Welcome back</h1>
-      <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Sign in with your ThriftVerse account.</p>
+      <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Sign in with your account.</p>
 
       <form className="mt-8 space-y-4" onSubmit={handleSubmit} noValidate>
         {formError ? (

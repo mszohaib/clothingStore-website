@@ -17,7 +17,7 @@ export function WhyUsSection() {
       <Container>
         <SectionHeader
           align="center"
-          eyebrow="Why ThriftVerse"
+          eyebrow="Why shop here"
           title="Built for trust"
           description="Same rules you know from IG, with checkout that feels like a serious brand."
         />

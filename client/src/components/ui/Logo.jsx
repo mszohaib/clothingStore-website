@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { cn } from '../../utils/cn';
-import mainLogo from '../../assets/mainLogo.jpg';
 
+/** Text-only wordmark — no third-party or client logo imagery (portfolio-safe). */
 export function Logo({
   className,
   to = '/',
@@ -11,7 +11,7 @@ export function Logo({
   navFramed = false,
 }) {
   const aria =
-    typeof to === 'string' && to.startsWith('/admin') ? 'ThriftVerse admin' : 'ThriftVerse home';
+    typeof to === 'string' && to.startsWith('/admin') ? 'Railframe admin' : 'Railframe home';
 
   const frameSize = navFramed
     ? compact
@@ -19,47 +19,21 @@ export function Logo({
       : 'h-10 w-10 sm:h-[2.625rem] sm:w-[2.625rem]'
     : null;
 
-  const imgClasses = cn(
-    'shrink-0',
-    navFramed
-      ? 'h-full w-full object-contain p-[6px] sm:p-[7px]'
-      : 'w-auto object-contain object-left',
-    !navFramed &&
-      (compact
-        ? 'h-7 max-h-8 max-w-[4.5rem] sm:max-w-[5rem]'
-        : 'h-8 max-h-10 max-w-[min(42vw,7.5rem)] sm:h-9 sm:max-w-[8.5rem]'),
-    imageClassName,
-  );
-
-  const mark = (
-    <img
-      src={mainLogo}
-      alt=""
-      decoding="async"
-      fetchPriority="high"
-      className={imgClasses}
-    />
-  );
-
-  const framedMark = navFramed ? (
+  const initialMark = (
     <span
       className={cn(
-        'relative flex shrink-0 items-center justify-center overflow-hidden rounded-full',
-        'border border-neutral-200/90 bg-neutral-50',
-        'shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_14px_-2px_rgba(0,0,0,0.08)]',
-        'ring-1 ring-neutral-900/[0.04]',
-        'transition-[transform,box-shadow,background-color,border-color] duration-300 ease-out',
-        'dark:border-neutral-700/90 dark:bg-neutral-900 dark:shadow-[0_2px_12px_-2px_rgba(0,0,0,0.45)] dark:ring-white/[0.06]',
-        'group-hover:scale-[1.04] group-hover:border-neutral-300/90 group-hover:shadow-[0_4px_20px_-4px_rgba(244,63,140,0.18),0_2px_8px_-2px_rgba(0,0,0,0.08)]',
-        'dark:group-hover:border-neutral-600 dark:group-hover:shadow-[0_4px_24px_-4px_rgba(244,63,140,0.22),0_2px_12px_-2px_rgba(0,0,0,0.5)]',
+        'flex shrink-0 items-center justify-center rounded-full border border-neutral-200/90 bg-neutral-50 font-display text-sm font-extrabold text-accent shadow-sm dark:border-neutral-700/90 dark:bg-neutral-900',
+        'transition-[transform,box-shadow] duration-300 ease-out group-hover:scale-[1.04] group-hover:shadow-md',
         frameSize,
+        imageClassName,
       )}
+      aria-hidden
     >
-      {mark}
+      R
     </span>
-  ) : (
-    mark
   );
+
+  const framedMark = navFramed ? initialMark : null;
 
   return (
     <Link
@@ -81,7 +55,7 @@ export function Logo({
             compact ? 'text-sm' : 'text-[1.05rem] sm:text-xl',
           )}
         >
-          Thrift<span className="text-accent transition-colors duration-300">Verse</span>
+          Rail<span className="text-accent transition-colors duration-300">frame</span>
         </span>
       ) : null}
     </Link>

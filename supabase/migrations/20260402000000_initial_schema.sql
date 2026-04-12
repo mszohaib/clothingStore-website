@@ -1,4 +1,4 @@
--- ThriftVerse MVP — initial schema
+-- Demo storefront — initial schema
 -- Run in Supabase SQL Editor or via `supabase db push` after linking a project.
 
 -- ---------------------------------------------------------------------------

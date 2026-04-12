@@ -7,7 +7,7 @@ import adminRoutes from './admin.routes.js';
 const router = Router();
 
 router.get('/health', (req, res) => {
-  res.json({ ok: true, service: 'thriftverse-api' });
+  res.json({ ok: true, service: 'railframe-api' });
 });
 
 router.use('/products', productsRoutes);

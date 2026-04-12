@@ -3,9 +3,11 @@ import { ApiError } from '../utils/ApiError.js';
 
 const ALLOWED_PAYMENT = new Set([
   'bank_transfer',
+  'digital_wallet',
+  'card_placeholder',
+  // legacy values still accepted if old clients submit them
   'nayapay',
   'easypaisa',
-  'card_placeholder',
 ]);
 
 const ALLOWED_STATUS = new Set(['pending', 'confirmed', 'shipped', 'cancelled']);

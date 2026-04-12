@@ -1,7 +1,7 @@
 import { CategoryShowcase } from '../components/home/CategoryShowcase.jsx';
 import { CtaBanner } from '../components/home/CtaBanner.jsx';
 import { HeroSection } from '../components/home/HeroSection.jsx';
-import { InstagramGallery } from '../components/home/InstagramGallery.jsx';
+import { LookbookGallery } from '../components/home/LookbookGallery.jsx';
 import { NewDropsSection } from '../components/home/NewDropsSection.jsx';
 import { TestimonialsSection } from '../components/home/TestimonialsSection.jsx';
 import { TrendingSection } from '../components/home/TrendingSection.jsx';
@@ -15,7 +15,7 @@ export function HomePage() {
       <NewDropsSection />
       <TrendingSection />
       <WhyUsSection />
-      <InstagramGallery />
+      <LookbookGallery />
       <TestimonialsSection />
       <CtaBanner />
     </>

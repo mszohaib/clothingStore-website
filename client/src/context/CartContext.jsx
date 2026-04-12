@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { getPrimaryImageUrl } from '../utils/product.js';
 
-const STORAGE_KEY = 'thriftverse-cart';
+const STORAGE_KEY = 'railframe-cart';
 
 export function lineKey(slug, size) {
   return `${String(slug ?? '').trim()}::${String(size ?? '').trim()}`;

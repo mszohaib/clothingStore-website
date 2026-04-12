@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: 'How do I pay?',
-    a: 'Checkout shows available methods (e.g. bank transfer, NayaPay, Easypaisa). Follow the instructions after placing your order for manual transfers.',
+    a: 'Checkout shows available methods (e.g. bank transfer, digital wallet). Follow the instructions after placing your order for manual transfers.',
   },
 ];
 

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Camera } from 'lucide-react';
-import { footerColumns, instagramUrl } from '../../data/navigation.js';
+import { footerColumns } from '../../data/navigation.js';
 import { Container } from '../ui/Container.jsx';
 import { Logo } from '../ui/Logo.jsx';
 
@@ -12,20 +11,10 @@ export function Footer() {
       <Container className="py-12 lg:py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
-            <Logo imageClassName="h-9 max-h-11 w-auto sm:h-10 sm:max-w-[9.5rem]" />
+            <Logo navFramed className="max-w-[12rem]" />
             <p className="max-w-xs text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-              Curated streetwear &amp; thrift from Pakistan. Original pieces, limited drops, DM-era upgraded to a
-              proper store experience.
+              Demo clothing storefront — curated pieces, limited drops, and a full cart / checkout flow for portfolio use.
             </p>
-            <a
-              href={instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-900 transition-colors hover:text-accent dark:text-white dark:hover:text-accent"
-            >
-              <Camera className="h-5 w-5" strokeWidth={1.75} />
-              Instagram
-            </a>
           </div>
           {footerColumns.map((col) => (
             <div key={col.title}>
@@ -48,7 +37,7 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 text-center text-xs text-neutral-500 dark:border-neutral-800 dark:text-neutral-500 sm:flex-row sm:text-left">
-          <p>&copy; {year} ThriftVerse. All rights reserved.</p>
+          <p>&copy; {year} Railframe (demo). Not a real brand.</p>
           <div className="flex flex-wrap justify-center gap-4 sm:justify-end">
             <Link to="/policy" className="hover:text-neutral-800 dark:hover:text-neutral-300">
               Policies

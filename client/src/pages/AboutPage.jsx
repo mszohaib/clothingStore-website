@@ -1,7 +1,6 @@
 import { Heart, Recycle, Sparkles } from 'lucide-react';
 import { Button } from '../components/ui/Button.jsx';
 import { Container } from '../components/ui/Container.jsx';
-import { instagramUrl } from '../data/navigation.js';
 
 const pillars = [
   {
@@ -16,7 +15,7 @@ const pillars = [
   },
   {
     title: 'Community first',
-    body: 'ThriftVerse exists for people who care about what they wear. DM us, ask fit questions, and tell us what you want to see next.',
+    body: 'Railframe exists as a demo for portfolios — ask fit questions through contact, and swap this copy for a real brand story.',
     icon: Heart,
   },
 ];
@@ -28,33 +27,27 @@ export function AboutPage() {
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-accent">About</p>
           <h1 className="mt-2 font-display text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-white sm:text-4xl lg:text-5xl">
-            ThriftVerse is for the obsessed
+            Built for the fit-obsessed
           </h1>
           <p className="mt-6 text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
-            We started as collectors tired of digging through racks with no context. ThriftVerse brings vintage sportswear and
-            street pieces to one place — photographed honestly, priced fairly, and described so you know what you are getting
-            before it lands on your doorstep.
+            This page showcases a fictional storefront: vintage sportswear and street pieces in one place — photographed
+            honestly, priced fairly, and described so you know what you are getting before it lands on your doorstep.
           </p>
           <p className="mt-4 text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
-            New drops hit weekly. Preorders and sold archives live alongside in-stock gear so you can plan fits, compare
-            past releases, and never miss the next grail.
+            New drops, preorders, and sold archives are demo data — swap in your own catalog and policies when you ship for
+            real.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button to="/shop">Shop the catalog</Button>
-            <a
-              href={instagramUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex h-11 items-center justify-center rounded-xl border border-neutral-300 bg-white px-5 text-sm font-semibold tracking-wide text-neutral-900 transition-colors hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100 dark:hover:bg-neutral-800"
-            >
-              Instagram
-            </a>
+            <Button to="/contact" variant="secondary">
+              Contact
+            </Button>
           </div>
         </div>
         <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-neutral-200 bg-gradient-to-br from-accent/20 via-neutral-100 to-neutral-200 dark:border-neutral-800 dark:from-accent/10 dark:via-neutral-900 dark:to-neutral-950">
           <div className="absolute inset-0 flex flex-col justify-end p-8 sm:p-10">
             <p className="font-display text-2xl font-bold text-neutral-900 dark:text-white">&ldquo;Wear the story.&rdquo;</p>
-            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">— ThriftVerse</p>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">— Railframe (demo)</p>
           </div>
         </div>
       </div>

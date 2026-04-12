@@ -52,7 +52,7 @@ export const whyUsItems = [
   },
   {
     title: 'Trusted Payment',
-    body: 'NayaPay, bank transfer, and vetted local rails — checkout built for Pakistan.',
+    body: 'Demo checkout supports bank transfer and placeholder payment options — wire this to your real provider later.',
     icon: 'wallet',
   },
   {
@@ -64,26 +64,26 @@ export const whyUsItems = [
 
 export const testimonials = [
   {
-    quote: 'Jersey was deadstock quality. Packaging felt premium — not your usual IG seller vibe.',
+    quote: 'Jersey was deadstock quality. Packaging felt premium — not your usual resale-app roulette.',
     name: 'Hassan R.',
-    city: 'Karachi',
+    city: 'Austin',
     rating: 5,
   },
   {
     quote: 'Finally a store that looks legit. Tracking comms were clear and the fit is exactly as described.',
     name: 'Ayesha M.',
-    city: 'Lahore',
+    city: 'Denver',
     rating: 5,
   },
   {
-    quote: 'Copped a windbreaker I had been hunting for months. ThriftVerse is now my first stop.',
+    quote: 'Copped a windbreaker I had been hunting for months. This shop is now my first stop.',
     name: 'Bilal K.',
-    city: 'Islamabad',
+    city: 'Portland',
     rating: 5,
   },
 ];
 
-export const instagramTiles = [
+export const lookbookTiles = [
   u('photo-1523381210434-271e8be1f52b', 600),
   u('photo-1503341504253-dff4815485f1', 600),
   u('photo-1441986300917-64674bd600d8', 600),
