@@ -6,6 +6,12 @@ function required(name) {
   return v;
 }
 
+/** Comma-separated list, e.g. https://app.vercel.app,http://localhost:5173 */
+export function getAllowedOrigins() {
+  const raw = process.env.FRONTEND_URL || 'http://localhost:5173';
+  return raw.split(',').map((s) => s.trim()).filter(Boolean);
+}
+
 export const env = {
   NODE_ENV: process.env.NODE_ENV || 'development',
   PORT: process.env.PORT || '5000',

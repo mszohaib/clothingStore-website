@@ -1,15 +1,25 @@
 import express from 'express';
 import cors from 'cors';
-import { env } from './config/env.js';
+import { getAllowedOrigins } from './config/env.js';
 import apiRoutes from './routes/index.js';
 import { notFound } from './middleware/notFound.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
 const app = express();
 
+const allowedOrigins = getAllowedOrigins();
+
 app.use(
   cors({
-    origin: env.FRONTEND_URL,
+    origin(origin, callback) {
+      if (!origin) {
+        return callback(null, true);
+      }
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, origin);
+      }
+      return callback(null, false);
+    },
     credentials: true,
   }),
 );
